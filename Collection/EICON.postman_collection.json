@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "91682f6f-9a06-4a10-9dfe-62fedefc5a71",
+		"name": "EICON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3799147"
+	},
+	"item": [
+		{
+			"name": "add pedidos xml",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<root>\r\n   <pedidos>\r\n      <pedido>\r\n         <codigoCliente>1</codigoCliente>\r\n         <nomeProduto>produto 01</nomeProduto>\r\n         <numeroControle>1</numeroControle>\r\n         <valorUnitario>10.0</valorUnitario>\r\n      </pedido>\r\n      <pedido>\r\n         <codigoCliente>2</codigoCliente>\r\n         <nomeProduto>produto 02</nomeProduto>\r\n         <numeroControle>2</numeroControle>\r\n         <quantidade>8</quantidade>\r\n         <valorUnitario>10.0</valorUnitario>\r\n      </pedido>\r\n      <pedido>\r\n         <codigoCliente>3</codigoCliente>\r\n         <nomeProduto>produto 03</nomeProduto>\r\n         <numeroControle>3</numeroControle>\r\n         <quantidade>10</quantidade>\r\n         <valorUnitario>10.0</valorUnitario>\r\n      </pedido>\r\n      <pedido>\r\n         <codigoCliente>4</codigoCliente>\r\n         <nomeProduto>produto 04</nomeProduto>\r\n         <numeroControle>4</numeroControle>\r\n         <quantidade>30</quantidade>\r\n         <valorUnitario>10.0</valorUnitario>\r\n      </pedido>\r\n   </pedidos>\r\n</root>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pedidos?mediaType=xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pedidos"
+					],
+					"query": [
+						{
+							"key": "mediaType",
+							"value": "xml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add pedidos json",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pedidos\": [\r\n            {\r\n                \"codigoCliente\": 1,\r\n                \"nomeProduto\": \"produto 10\",\r\n                \"numeroControle\": 10,\r\n                \"valorUnitario\": 10.0\r\n            },\r\n            {\r\n                \"codigoCliente\": 2,\r\n                \"nomeProduto\": \"produto 20\",\r\n                \"numeroControle\": 20,\r\n                \"quantidade\": 8,\r\n                \"valorUnitario\": 10.0\r\n            },\r\n            {\r\n                \"codigoCliente\": 3,\r\n                \"nomeProduto\": \"produto 30\",\r\n                \"numeroControle\": 30,\r\n                \"quantidade\": 10,\r\n                \"valorUnitario\": 10.0\r\n            },\r\n            {\r\n                \"codigoCliente\": 4,\r\n                \"nomeProduto\": \"produto 40\",\r\n                \"numeroControle\": 40,\r\n                \"quantidade\": 30,\r\n                \"valorUnitario\": 10.0\r\n            }\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pedidos?mediaType=json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pedidos"
+					],
+					"query": [
+						{
+							"key": "mediaType",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pedidos por data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pedidos/2024-08-14/data?mediaType=json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pedidos",
+						"2024-08-14",
+						"data"
+					],
+					"query": [
+						{
+							"key": "mediaType",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pedidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pedidos?mediaType=xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pedidos"
+					],
+					"query": [
+						{
+							"key": "mediaType",
+							"value": "xml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pedido por controle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pedidos/10/controle?mediaType=json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pedidos",
+						"10",
+						"controle"
+					],
+					"query": [
+						{
+							"key": "mediaType",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
